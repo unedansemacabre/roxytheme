@@ -38,6 +38,7 @@ li[data-author-id="234141699234856960"] {
         margin-left: -7.8rem;
         margin-bottom: 0.1rem;
         overflow: visible;
+        font-size: 110%;
         span {
             animation: fadeText 1s ease-in;
             animation-delay: 0s;
