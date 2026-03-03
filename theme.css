@@ -1,3 +1,5 @@
+/* @import url('https://snrona.neocities.org/misc/discordcss/snrona.css'); */
+/* @import url('https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/theme.css'); */
 @font-face {
     font-family: main;
     font-weight: regular;
@@ -236,4 +238,15 @@ li[data-author-id="234141699234856960"]:not(:has(+ li[data-author-id="2341416992
         inset -10px 0px 8px -8px #AE8964, 
         inset 0px -10px 8px -8px #AE8964;
     }
+    div[class*="groupStart"][class*="message__"] {
+        box-shadow: inset 10px 0px 8px -8px #AE8964,
+        inset -10px 0px 8px -8px #AE8964, 
+        inset 0px -10px 8px -8px #AE8964,
+        inset 0px 10px 8px -8px #AE8964;
+    }
 }
+
+.name__2ea32 {
+    font-size: 100% !important;
+}
+
