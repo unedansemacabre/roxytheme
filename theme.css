@@ -1,15 +1,23 @@
-
+@property --a {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
+@property --b {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%;
+}
 @font-face {
     font-family: main;
     font-weight: regular;
-    src: url(https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/fonts/Distropiax.otf) format('opentype');
-    size-adjust: 160%;
+    src: url("https://db.onlinewebfonts.com/t/5df15119da72f67fdbaa0ce6cc7b19c7.woff2") format('woff2');
+    size-adjust: 135%;
 }
 @font-face {
     font-family: dropcap;
     font-weight: regular;
-    src: url(https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/fonts/rediviva.zierbuchstaben.ttf) format('truetype');
-    size-adjust: 190%;
+    src: url('https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/fonts/Feinsliebchen Barock.ttf') format('truetype');
 }
 
 @keyframes fadeText {
@@ -29,11 +37,23 @@
     }
 }
 
+@keyframes shiny {
+    0% {
+        --a: 0%; 
+        --b: 20%;
+    }
+    100%
+    {
+        --a: 80%; 
+        --b: 100%;
+    }
+}
+
 li[data-author-id="234141699234856960"] {
     background: url(https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/images/paper.jpg) round;
     div[class*="messageContent"] {
         font-family: main !important;
-        line-height: 1.3rem;
+        line-height: 1rem;
         color: #130E0A;
         margin-left: -7.8rem;
         margin-bottom: 0.2rem;
@@ -57,8 +77,12 @@ li[data-author-id="234141699234856960"] {
             color: #AE8964;
         }
         strong{
-            color: #ffb95d;
-            text-shadow: 0px 0px 10px #ffb700;
+            background-image: linear-gradient(to bottom right, #F4C430 var(--a), white, #F4C430 var(--b));
+            -webkit-text-stroke: #AE8964 0.03rem;
+            color: transparent;
+            animation: shiny 3s ease infinite;
+            animation-delay: 0s;
+            background-clip: text !important;
         }
         img[class*="emoji"] {
             filter: drop-shadow(0px 0px 5px #ffb700)
@@ -72,7 +96,7 @@ li[data-author-id="234141699234856960"] {
         border-bottom: none;
         border-width: 13px;
         border-image: url(https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/images/border3.jpg) 61 61 61 61 repeat;
-        padding-top: 0.6rem;
+        padding-top: 0.3rem;
     }
     div[class*="groupStart"][class*="message__"] {
         box-shadow: inset 10px 0px 8px -8px #AE8964,
@@ -87,35 +111,37 @@ li[data-author-id="234141699234856960"] {
     div:not([class*="groupStart"])[class*="message__"]::first-letter {
         color: #56739A;
         font-size: 130%;
-        line-height: 1.3rem;
         text-transform: uppercase;
     }
     div[class*="groupStart"] div[class*="messageContent"] {
-        padding-top: 0.65rem;
+        padding-top: 1.2rem;
+        min-height: 2rem;
     }
 
     div[class*="groupStart"] div:not([class*="repliedTextContent"])[class*="messageContent"]::first-letter {
         font-family: dropcap !important;
-        mix-blend-mode: normal;
+        text-transform: uppercase;
+        margin-right: 0.05rem;
         box-shadow: inset -4px -4px #CCB647;
         background: none;
         background-color: #F4C430;
         color: #4B0082;
-        line-height: 2rem;
         font-weight: normal;
         text-shadow: none;
+        float: left;
+        initial-letter: 2;
         
     }
     img[class*="avatar"] {
         border-radius:0%;
         width: 2rem;
         height: 2rem;
-        top: 0.15rem;
+        top: 0.1rem;
         margin-left: 0.2rem;
     }
 
     div[class*="message_"][class*="hasReply"] img[class*="avatar"] {
-        margin-top: 1rem;
+        margin-top: 1.7rem;
     }
 
     img[class*="avatarDecoration"] {
@@ -135,6 +161,7 @@ li[data-author-id="234141699234856960"] {
         padding-bottom: 0.2rem;
         border-top: 0.3rem double #4B0082;
         border-bottom: 0.3rem double #4B0082;
+        top: 0.2rem;
     }
     span[class*="username"] {
         font-family: main !important;
@@ -152,12 +179,12 @@ li[data-author-id="234141699234856960"] {
     }
 
     div[id*="message-reply-context"] {
-        margin-top: -1rem;
+        margin-top: -0.9rem;
     }
 
     
     div[class*="repliedMessage"] img[class*="replyAvatar"] {
-        margin-top: 0.6rem;
+        margin-top: 0.8rem;
     }
 
     div[class*="repliedMessage"] span[class*="username"] {
@@ -180,11 +207,11 @@ li[data-author-id="234141699234856960"] {
         font-family: main !important;
         color: #130E0A;
         font-size: 80%;
-        padding-bottom: 0.7rem;
+        padding-bottom: 1.4rem;
         padding-left: 3.4rem;
     }
     div[class*="repliedTextContent"] {
-        padding-bottom: 1rem;
+        padding-bottom: 1.3rem;
     }
 
     div[class*="repliedMessage"] span[class*="clanTag"] {
@@ -244,4 +271,3 @@ li[data-author-id="234141699234856960"]:not(:has(+ li[data-author-id="2341416992
         inset 0px 10px 8px -8px #AE8964;
     }
 }
-
