@@ -11,8 +11,8 @@
 @font-face {
     font-family: main;
     font-weight: regular;
-    src: url("https://db.onlinewebfonts.com/t/5df15119da72f67fdbaa0ce6cc7b19c7.woff2") format('woff2');
-    size-adjust: 135%;
+    src: url("https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/fonts/SoulsideBetrayed.ttf") format('truetype');
+    size-adjust: 155%;
 }
 @font-face {
     font-family: dropcap;
@@ -53,7 +53,7 @@ li[data-author-id="234141699234856960"] {
     background: url(https://raw.githubusercontent.com/unedansemacabre/roxytheme/main/images/paper.jpg) round;
     div[class*="messageContent"] {
         font-family: main !important;
-        line-height: 1rem;
+        line-height: 1.2rem;
         color: #130E0A;
         margin-left: -7.8rem;
         margin-bottom: 0.2rem;
@@ -115,7 +115,7 @@ li[data-author-id="234141699234856960"] {
     }
     div[class*="groupStart"] div[class*="messageContent"] {
         padding-top: 1.2rem;
-        min-height: 2rem;
+        min-height: 2.3rem;
     }
 
     div[class*="groupStart"] div:not([class*="repliedTextContent"])[class*="messageContent"]::first-letter {
@@ -129,7 +129,7 @@ li[data-author-id="234141699234856960"] {
         font-weight: normal;
         text-shadow: none;
         float: left;
-        initial-letter: 2;
+        initial-letter: 1.9;
         
     }
     img[class*="avatar"] {
@@ -184,7 +184,7 @@ li[data-author-id="234141699234856960"] {
 
     
     div[class*="repliedMessage"] img[class*="replyAvatar"] {
-        margin-top: 0.8rem;
+        margin-top: 1.2rem;
     }
 
     div[class*="repliedMessage"] span[class*="username"] {
@@ -192,13 +192,15 @@ li[data-author-id="234141699234856960"] {
         color: #4B0082;
         font-size: 85%;
         line-height: 1rem;
-        top: 0.4rem;
+        top: 0.7rem;
     }
 
     div[class*="repliedMessageContentHovered"] {
         border-color:#AE8964;
     }
-
+    div[class*="repliedMessageClickableSpine"] {
+        top: 1.7rem;
+    }
     div[class*="repliedMessageClickableSpineHovered"] {
         color:#AE8964 !important;
     }
@@ -210,6 +212,18 @@ li[data-author-id="234141699234856960"] {
         padding-bottom: 1.4rem;
         padding-left: 3.4rem;
     }
+    div[class*="repliedTextPreview"][class*="clickable"] {
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+        margin-top: 1rem;
+    }
+
+    svg[class*="repliedTextContentTrailingIcon"]{
+        color: #AE8964;
+        margin-top: 1rem;
+
+    }
+
     div[class*="repliedTextContent"] {
         padding-bottom: 1.3rem;
     }
@@ -246,6 +260,15 @@ li[data-author-id="234141699234856960"] {
                 width: 1.5rem;
                 height: 1.5rem;
                 margin-left: 0rem;
+                margin-bottom: 1.7rem;
+            }
+        }
+    }
+
+    div[class*="visualMediaItemContainer"] + div[class*="reactions"] {
+        div[class*="reactionInner"], div[class*="reactionBtn"] {
+            img[class*="avatar"] {
+                margin-bottom: 0rem;
             }
         }
     }
