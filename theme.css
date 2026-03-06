@@ -78,7 +78,7 @@ li[data-author-id="234141699234856960"] {
         }
         strong{
             background-image: linear-gradient(to bottom right, #F4C430 var(--a), white, #F4C430 var(--b));
-            -webkit-text-stroke: #AE8964 0.03rem;
+            -webkit-text-stroke: #AE8964 0.005rem;
             color: transparent;
             animation: shiny 3s ease infinite;
             animation-delay: 0s;
